@@ -1,5 +1,21 @@
 # docker-compose for Laravel
 
+## Project Structure
+
+```
+Project Name
+├── dbdata
+├── docker-compose.yml
+├── Dockerfile
+├── logs
+│   └── nginx
+├── nginx
+│   └── conf.d
+│       └── default.conf
+├── README.md
+└── src
+```
+
 ## Usage
 To get started, make sure you have Docker and Docker-compose installed on your system, and then clone this repository.
 
