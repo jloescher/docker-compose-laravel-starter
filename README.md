@@ -61,6 +61,28 @@ Once the dependencies have been installed using npm install, you can compile you
 
 ```docker-compose run --rm npm run dev```
 
+### Stack
+* Nginx Stable (Alpine)
+  * HOST:3000
+* MySQL 8.0
+  * HOST:3306
+* PHP 7.4 FPM (Alpine)
+  * HOST:9000
+* PHPMyAdmin
+  * HOST:8000
+* Mailhog
+  * HOST:8025
+  * SMTP:1025
+* Composer
+* Node Current (Alpine)
+* Artisan
+
+### Notes for Usage
+* .env
+  * DB_HOST=db (Required)
+  * MAIL_HOST=mail
+  * MAIL_PORT=1025
+
 #### For further documentation see the address below:
 
 [https://laravel.com/docs/7.x](https://laravel.com/docs/7.x)

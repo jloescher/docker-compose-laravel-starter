@@ -50,7 +50,33 @@ services:
             - "9000:9000"
         networks:
             - laravel
-    
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        restart: unless-stopped
+        ports:
+            - "8000:80"
+        environment:
+            PMA_HOST: db
+        depends_on:
+            - php
+            - db
+        networks:
+            - laravel
+
+    mail:
+        image: mailhog/mailhog
+        container_name: mail
+        restart: unless-stopped
+        ports:
+        - 1025:1025
+        - 8025:8025
+        depends_on:
+            - db
+        networks:
+            - laravel
+
     composer:
         image: composer:latest
         container_name: composer
