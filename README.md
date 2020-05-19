@@ -41,14 +41,14 @@ Once the laravel/ui package has been installed, you may install the frontend sca
 
 ```
 // Generate basic scaffolding...
-docker-compose run --rm artisan ui bootstrap
-docker-compose run --rm artisan ui vue
-docker-compose run --rm artisan ui react
+docker-compose run --rm --user `id -u`:`id -g` artisan ui bootstrap
+docker-compose run --rm --user `id -u`:`id -g` artisan ui vue
+docker-compose run --rm --user `id -u`:`id -g` artisan ui react
 
 // Generate login / registration scaffolding...
-docker-compose run --rm artisan ui bootstrap --auth
-docker-compose run --rm artisan ui vue --auth
-docker-compose run --rm artisan ui react --auth
+docker-compose run --rm --user `id -u`:`id -g` artisan ui bootstrap --auth
+docker-compose run --rm --user `id -u`:`id -g` artisan ui vue --auth
+docker-compose run --rm --user `id -u`:`id -g` artisan ui react --auth
 ```
 
 ### Installing NPM Dependencies
